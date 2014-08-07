@@ -11,7 +11,8 @@ end
 service "httpd" do
     action [:enable,:restart]
 end
-cookbook_file "#{document_root}/index.php" do
-  source 'index.php'
+cookbook_file "#{document_root}/file.php" do
+  source 'file.php'
   mode '0644'
 end
+#include_recipe "php"
